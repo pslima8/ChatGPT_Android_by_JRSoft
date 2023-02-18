@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "1029433356019",
+    "project_id": "palpitero-a7402",
+    "storage_bucket": "palpitero-a7402.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029433356019:android:91fa77d70562a5e8999186",
+        "android_client_info": {
+          "package_name": "br.com.jrsoft.chatgptandroidbyjrsoft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029433356019-7ghs3egnjqf32ph4ui8601g0isr5r6d6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.jrsoft.chatgptandroidbyjrsoft",
+            "certificate_hash": "6d73ee50b036f65a190a509647500afa7033dd79"
+          }
+        },
+        {
+          "client_id": "1029433356019-qjbar5gjffn0q1uthitpu45vu4khcscs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO-xd94EO15huzFDd775qBkNyJRRVaCZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029433356019-mh7qhlcl07pceto9te4hmu8delcvk62p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029433356019:android:017b4395644a49f6999186",
+        "android_client_info": {
+          "package_name": "br.com.jrsoft.chatgptbyjrsoft"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029433356019-4m04rfl992iop4i5d5rc7edg7nu1255p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.jrsoft.chatgptbyjrsoft",
+            "certificate_hash": "6d73ee50b036f65a190a509647500afa7033dd79"
+          }
+        },
+        {
+          "client_id": "1029433356019-qjbar5gjffn0q1uthitpu45vu4khcscs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO-xd94EO15huzFDd775qBkNyJRRVaCZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029433356019-mh7qhlcl07pceto9te4hmu8delcvk62p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029433356019:android:7f9c37cc9a863548999186",
+        "android_client_info": {
+          "package_name": "br.com.jrsoft.palpitero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029433356019-qjbar5gjffn0q1uthitpu45vu4khcscs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO-xd94EO15huzFDd775qBkNyJRRVaCZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029433356019-mh7qhlcl07pceto9te4hmu8delcvk62p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1692720597779172~7442554053"
+    }
+  ],
+  "configuration_version": "1"
+}

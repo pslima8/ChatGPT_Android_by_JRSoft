@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ChatGPT Android by JRSoft</string>
+    <string name="openai_api_key">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</string>
+    <string name="fa_a_o_login_com_sua_conta_google">Faça o login com sua conta Google:</string>
+    <string name="chat_gpt_by_jrsoft">Chat GPT by JRSoft</string>
+    <string name="sua_pergunta_abaixo">Sua pergunta abaixo</string>
+    <string name="conversa_atual">Conversa atual</string>
+    <string name="bem_vindo_ao_chat_gpt_by_jrsoft">Bem vindo ao Chat GPT by JRSoft</string>
+    <string name="logo_chatgpt_by_jrsoft">Logo ChatGPT by JRSoft</string>
+    <string name="divis_o_entre_logo_e_corpo_do_app">Divisão entre Logo e corpo do App</string>
+    <string name="selecione_uma_conversa_ou_inicie_nova_conversa">Selecione uma conversa ou inicie Nova Conversa</string>
+    <string name="desconectar">Desconectar</string>
+    <string name="nova_conversa">Nova Conversa</string>
+
+</resources>

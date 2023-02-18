@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chat_layout_corpo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/chat_layout_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/chat_image_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/logo_chatgpt_by_jrsoft"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@id/chat_image_divisao_logo"
+            app:layout_constraintEnd_toStartOf="@+id/chat_texto_logo"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_chat_gpt" />
+
+        <ImageView
+            android:id="@+id/chat_image_divisao_logo"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/divis_o_entre_logo_e_corpo_do_app"
+            app:layout_constraintBottom_toTopOf="@+id/chat_texto_bem_vondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chat_image_logo"
+            app:srcCompat="@android:drawable/screen_background_dark" />
+
+        <TextView
+            android:id="@+id/chat_texto_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_gpt_by_jrsoft"
+            android:textColor="?android:attr/amPmTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/chat_image_logo"
+            app:layout_constraintEnd_toStartOf="@+id/chat_avatar"
+            app:layout_constraintStart_toEndOf="@+id/chat_image_logo"
+            app:layout_constraintTop_toTopOf="@+id/chat_image_logo" />
+
+        <TextView
+            android:id="@+id/chat_texto_bem_vondo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/bem_vindo_ao_chat_gpt_by_jrsoft"
+            android:textColor="?android:attr/amPmTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chat_image_divisao_logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selecione_uma_conversa_ou_inicie_nova_conversa"
+            android:textColor="?android:attr/amPmTextColor"
+            app:layout_constraintBottom_toTopOf="@+id/chat_layout_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chat_texto_bem_vondo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chat_layout_menu"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/chat_botao_desconectar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <ImageButton
+                android:id="@+id/chat_img_btn_nova_conversa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_chat"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/chat_img_btn_nova_comparaao"
+                app:layout_constraintEnd_toStartOf="@+id/chat_img_btn_nova_imagem"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/btn_chat" />
+
+            <ImageButton
+                android:id="@+id/chat_img_btn_nova_imagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/btn_img_inativo"
+                app:layout_constraintBottom_toTopOf="@+id/chat_img_btn_novo_codigo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chat_img_btn_nova_conversa"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/btn_img_inativo" />
+
+            <ImageButton
+                android:id="@+id/chat_img_btn_nova_comparaao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_compare_inativo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/chat_img_btn_nova_conversa"
+                app:layout_constraintEnd_toStartOf="@+id/chat_img_btn_novo_codigo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chat_img_btn_nova_conversa"
+                app:srcCompat="@drawable/btn_compare_inativo" />
+
+            <ImageButton
+                android:id="@+id/chat_img_btn_novo_codigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_code_inativo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chat_img_btn_nova_comparaao"
+                app:layout_constraintTop_toBottomOf="@+id/chat_img_btn_nova_imagem"
+                app:srcCompat="@drawable/btn_code_inativo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/chat_botao_desconectar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/desconectar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/chat_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/chat_texto_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chat_texto_logo"
+            app:layout_constraintTop_toTopOf="@+id/chat_texto_logo"
+            app:srcCompat="@drawable/logo_chat_gpt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chat_layout_banner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat_layout_corpo">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/chat_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-1692720597779172/3838748012"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

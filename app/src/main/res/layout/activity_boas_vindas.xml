@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BoasVindasActivity">
+
+    <ImageView
+        android:id="@+id/boas_vindas_image_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/boas_vindas_texto_logo"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_chat_gpt"
+        android:contentDescription="@string/logo_chatgpt_by_jrsoft"/>
+
+    <TextView
+        android:id="@+id/boas_vindas_texto_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/chat_gpt_by_jrsoft"
+        android:textColor="?android:attr/amPmTextColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/boas_vindas_image_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boas_vindas_image_logo"
+        app:layout_constraintTop_toTopOf="@+id/boas_vindas_image_logo" />
+
+    <ImageView
+        android:id="@+id/boas_vindas_image_divisao_logo"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boas_vindas_image_logo"
+        app:srcCompat="@android:drawable/screen_background_dark"
+        android:contentDescription="@string/divis_o_entre_logo_e_corpo_do_app" />
+
+    <TextView
+        android:id="@+id/boas_vindas_texto_bem_vondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="?android:attr/amPmTextColor"
+        android:text="@string/bem_vindo_ao_chat_gpt_by_jrsoft"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/boas_vindas_texto_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boas_vindas_image_divisao_logo" />
+
+    <TextView
+        android:id="@+id/boas_vindas_texto_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fa_a_o_login_com_sua_conta_google"
+        android:textSize="14sp"
+        android:textColor="?android:attr/amPmTextColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/boas_vindas_botao_login_google"
+        app:layout_constraintEnd_toEndOf="@+id/boas_vindas_texto_bem_vondo"
+        app:layout_constraintStart_toStartOf="@+id/boas_vindas_texto_bem_vondo"
+        app:layout_constraintTop_toBottomOf="@+id/boas_vindas_texto_bem_vondo"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/boas_vindas_botao_login_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boas_vindas_texto_login" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boas_vindas_botao_login_google"
+        app:srcCompat="@drawable/logo_chat_gpt"
+        android:contentDescription="@string/logo_chatgpt_by_jrsoft" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

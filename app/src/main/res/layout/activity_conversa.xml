@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConversaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conversa_layout_corpo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/conversa_layout_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/conversa_image_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/conversa_image_divisao_logo"
+            app:layout_constraintEnd_toStartOf="@+id/conversa_texto_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo_chat_gpt" />
+
+        <TextView
+            android:id="@+id/conversa_texto_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_gpt_by_jrsoft"
+            android:textColor="?android:attr/amPmTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/conversa_image_logo"
+            app:layout_constraintEnd_toStartOf="@+id/conversa_avatar"
+            app:layout_constraintStart_toEndOf="@+id/conversa_image_logo"
+            app:layout_constraintTop_toTopOf="@+id/conversa_image_logo" />
+
+        <ImageView
+            android:id="@+id/conversa_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="@+id/conversa_texto_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/conversa_texto_logo"
+            app:layout_constraintTop_toTopOf="@+id/conversa_texto_logo"
+            app:srcCompat="@drawable/logo_chat_gpt" />
+
+        <ImageView
+            android:id="@+id/conversa_image_divisao_logo"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/conversa_texto_bem_vindo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conversa_image_logo"
+            app:srcCompat="@android:drawable/screen_background_dark" />
+
+        <TextView
+            android:id="@+id/conversa_texto_bem_vindo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="?android:attr/amPmTextColor"
+            android:text="@string/bem_vindo_ao_chat_gpt_by_jrsoft"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conversa_image_divisao_logo" />
+
+        <TextView
+            android:id="@+id/conversa_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="?android:attr/amPmTextColor"
+            android:text="@string/conversa_atual"
+            app:layout_constraintEnd_toStartOf="@id/conversa_botao_limpar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conversa_texto_bem_vindo" />
+
+        <Button
+            android:id="@+id/conversa_botao_limpar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="limpar"
+            app:layout_constraintBottom_toBottomOf="@id/conversa_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/conversa_textView"
+            app:layout_constraintTop_toTopOf="@id/conversa_textView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conversa_layout_interacao"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@id/conversa_textView"
+            app:layout_constraintBottom_toTopOf="@id/conversa_botao_desconectar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ScrollView
+                android:id="@+id/conversa_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:fillViewport="true"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/conversa_texto_resposta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:background="?android:attr/amPmBackgroundColor"
+                    android:textColor="?android:attr/amPmTextColor"
+                    android:textSize="14sp" />
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="?android:attr/amPmTextColor"
+                android:text="@string/sua_pergunta_abaixo"
+                app:layout_constraintBottom_toTopOf="@+id/conversa_texto_prompt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/conversa_scroll" />
+
+            <EditText
+                android:id="@+id/conversa_texto_prompt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="?android:attr/amPmBackgroundColor"
+                android:textColor="?android:attr/amPmTextColor"
+                android:ems="10"
+                android:imeOptions="actionSend"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/conversa_botao_enviar"
+                app:layout_constraintEnd_toStartOf="@+id/conversa_botao_enviar"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/conversa_botao_enviar" />
+
+            <Button
+                android:id="@+id/conversa_botao_enviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Enviar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/conversa_texto_prompt"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/conversa_botao_desconectar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desconectar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/conversa_botao_voltar"
+            app:layout_constraintTop_toBottomOf="@id/conversa_layout_interacao" />
+
+        <Button
+            android:id="@+id/conversa_botao_voltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/conversa_botao_desconectar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conversa_layout_interacao" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conversa_layout_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conversa_layout_corpo">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/conversa_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-1692720597779172/7046407424"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
